@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/liner"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/congratulation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jp.ac.it_college.std.s14002.android.irresponsible.ResultScreen">
+
+    <LinearLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/result"
+        android:textColor="#fff"
+        android:textSize="60sp"
+        android:textStyle="bold|italic"
+        android:typeface="serif" />
+    </LinearLayout>
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_title"
+        android:gravity="center"
+        >
+        <TableRow
+            android:gravity="center"
+            >
+            <TextView
+                android:id="@+id/rank"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/score"
+                android:textColor="#fff"
+                android:textSize="30sp"
+                android:textStyle="bold|italic"
+                android:typeface="serif"
+                android:gravity="bottom|right"
+                android:layout_marginRight="80dp"
+                />
+
+            <TextView
+                android:id="@+id/rank_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/rank_alphabet"
+                android:textColor="#fff"
+                android:textSize="100sp"
+                android:textStyle="bold|italic"
+                android:typeface="serif"
+                android:gravity="bottom"
+                />
+
+
+        </TableRow>
+        <TableRow
+            android:gravity="center"
+            >
+            <TextView
+                android:id="@+id/clear_time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/clear_time"
+                android:textColor="#fff"
+                android:textSize="30sp"
+                android:textStyle="bold|italic"
+                android:typeface="serif"
+                android:gravity="bottom|right"
+                android:layout_marginRight="80dp"
+                />
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time"
+                android:textColor="#fff"
+                android:textSize="50sp"
+                android:textStyle="bold|italic"
+                android:typeface="serif"
+                android:gravity="right"
+                />
+        </TableRow>
+
+        <TableRow
+            android:gravity="center"
+            >
+            <TextView
+                android:id="@+id/exp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/experience_point"
+                android:textColor="#fff"
+                android:textSize="30sp"
+                android:textStyle="bold|italic"
+                android:typeface="serif"
+                android:gravity="bottom|right"
+                android:layout_marginRight="80dp"
+                />
+            <TextView
+                android:id="@+id/exp_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/point"
+                android:textColor="#fff"
+                android:textSize="50sp"
+                android:textStyle="bold|italic"
+                android:typeface="serif"
+                android:gravity="right"
+                />
+        </TableRow>
+    </TableLayout>
+
+
+</RelativeLayout>

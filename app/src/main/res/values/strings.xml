@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">DarkMaze</string>
+    <string name="app_title">DarkMaze</string>
+    <string name="title_activity_home">Home</string>
+    <string name="dungeon_button">ダンジョン</string>
+    <string name="collection_button">コレクション</string>
+    <string name="menu_button">Extra</string>
+    <string name="level_view">Lv.</string>
+    <string name="super_button">超級</string>
+    <string name="senior_button">上級</string>
+    <string name="intermediate_button">中級</string>
+    <string name="beginner_button">初級</string>
+    <string name="result">Congratulation!!!</string>
+    <string name="score">Rank</string>
+    <string name="clear_time">Clear Time</string>
+    <string name="experience_point">Experience Point</string>
+    <string name="rank_alphabet">SSS</string>
+    <string name="time">00:00</string>
+    <string name="point">0</string>
+    <string name="level">00</string>
+</resources>

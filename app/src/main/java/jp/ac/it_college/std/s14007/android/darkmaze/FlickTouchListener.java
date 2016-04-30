@@ -66,14 +66,9 @@ public class FlickTouchListener implements View.OnTouchListener {
 
             // スライド
             case MotionEvent.ACTION_MOVE:
-//                Log.v("motionEvent", "--ACTION_MOVE");
-                break;
-
-            // タッチが離れた
-            case MotionEvent.ACTION_UP:
-//                Log.v("motionEvent", "--ACTION_UP");
                 nowTouchedX = event_.getX();
                 nowTouchedY = event_.getY();
+                Log.v("motionEvent", "--ACTION_MOVE");
 
                 if (startTouchY > nowTouchedY) {
                     if (startTouchX > nowTouchedX) {
@@ -150,6 +145,91 @@ public class FlickTouchListener implements View.OnTouchListener {
                     playerX = 0;
                     playerY = 0;
                 }
+
+                break;
+
+            // タッチが離れた
+            case MotionEvent.ACTION_UP:
+//                Log.v("motionEvent", "--ACTION_UP");
+//                nowTouchedX = event_.getX();
+//                nowTouchedY = event_.getY();
+
+                /*if (startTouchY > nowTouchedY) {
+                    if (startTouchX > nowTouchedX) {
+                        if ((startTouchY - nowTouchedY) > (startTouchX - nowTouchedX)) {
+                            if (startTouchY > nowTouchedY + adjust) {
+//                                Log.v("Flick", "--上");
+                                // 上フリック時の処理を記述する
+//                                playerY -= move;
+//                                direction = 1;
+                            }
+                        } else if ((startTouchY - nowTouchedY) < (startTouchX - nowTouchedX)) {
+                            if (startTouchX > nowTouchedX + adjust) {
+//                                Log.v("Flick", "--左");
+                                // 左フリック時の処理を記述する
+                                playerX += move;
+//                                direction = 0;
+                            }
+                        }
+                    } else if (startTouchX < nowTouchedX) {
+                        if ((startTouchY - nowTouchedY) > (nowTouchedX - startTouchX)) {
+                            if (startTouchY > nowTouchedY + adjust) {
+//                                Log.v("Flick", "--上");
+                                // 上フリック時の処理を記述する
+//                                playerY -= move;
+
+//                                direction = 1;
+                            }
+                        } else if ((startTouchY - nowTouchedY) < (nowTouchedX - startTouchX)) {
+                            if (startTouchX < nowTouchedX + adjust) {
+//                                Log.v("Flick", "--右");
+                                // 右フリック時の処理を記述する
+                                playerX -= move;
+//                                direction = 2;
+                            }
+                        }
+                    }
+                } else if (startTouchY < nowTouchedY) {
+                    if (startTouchX > nowTouchedX) {
+                        if ((nowTouchedY - startTouchY) > (startTouchX - nowTouchedX)) {
+                            if (startTouchY < nowTouchedY + adjust) {
+//                                Log.v("Flick", "--下");
+                                // 下フリック時の処理を記述する
+                                playerY += move;
+//                                direction = 3;
+                            }
+                        } else if ((nowTouchedY - startTouchY) < (startTouchX - nowTouchedX)) {
+                            if (startTouchX > nowTouchedX + adjust) {
+//                                Log.v("Flick", "--左");
+                                // 左フリック時の処理を記述する
+                                playerX += move;
+//                                direction = 0;
+                            }
+                        }
+                    } else if (startTouchX < nowTouchedX) {
+                        if ((nowTouchedY - startTouchY) > (nowTouchedX - startTouchX)) {
+                            if (startTouchY < nowTouchedY + adjust) {
+//                                Log.v("Flick", "--下");
+                                // 下フリック時の処理を記述する
+                                playerY += move;
+//                                direction = 3;
+                            }
+                        } else if ((nowTouchedY - startTouchY) < (nowTouchedX - startTouchX)) {
+                            if (startTouchX < nowTouchedX + adjust) {
+//                                Log.v("Flick", "--右");
+                                // 右フリック時の処理を記述する
+                                playerX -= move;
+//                                direction = 2;
+                            }
+                        }
+                    }
+                }
+
+                if (player != null) {
+                    player.move(-playerX, playerY);
+                    playerX = 0;
+                    playerY = 0;
+                }*/
                 break;
 
             // アップ後にほかの指がタッチ中の場合
@@ -162,7 +242,7 @@ public class FlickTouchListener implements View.OnTouchListener {
 //                Log.v("motionEvent", "--ACTION_CANCEL");
                 break;
 
-                // ターゲットとするUIの範囲外を押下
+            // ターゲットとするUIの範囲外を押下
             case MotionEvent.ACTION_OUTSIDE:
 //                Log.v("motionEvent", "--ACTION_OUTSIDE");
                 break;

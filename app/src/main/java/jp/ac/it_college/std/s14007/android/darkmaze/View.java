@@ -1,6 +1,7 @@
 package jp.ac.it_college.std.s14007.android.darkmaze;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -29,6 +30,7 @@ public class View extends SurfaceView implements SurfaceHolder.Callback {
 
     public View(Context context, int dungeonLevel) {
         super(context);
+
         this.dungeonLevel = dungeonLevel;
         getHolder().addCallback(this);
         this.setOnTouchListener(flickTouchListener);
@@ -65,15 +67,15 @@ public class View extends SurfaceView implements SurfaceHolder.Callback {
         int blockSize = 0;
         switch (dungeonLevel) {
             case 0:
-                flickTouchListener.move = 50;
+                flickTouchListener.move = 5;
                 blockSize = 100;
                 break;
             case 1:
-                flickTouchListener.move = 10;
+                flickTouchListener.move = 3;
                 blockSize = 50;
                 break;
             case 2:
-                flickTouchListener.move = 7;
+                flickTouchListener.move = 1;
                 blockSize = playerBitmap.getHeight();
                 break;
             case 3:

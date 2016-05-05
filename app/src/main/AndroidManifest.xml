@@ -24,10 +24,11 @@
             android:name=".Home"
             android:label="@string/title_activity_home"
             android:screenOrientation="landscape"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Result"
-            android:screenOrientation="landscape"
-            />
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Result"
+            android:screenOrientation="landscape" />
+        <activity android:name=".Test"></activity>
     </application>
 
 </manifest>

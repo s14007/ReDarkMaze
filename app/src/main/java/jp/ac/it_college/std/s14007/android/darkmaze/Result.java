@@ -16,6 +16,7 @@ import java.util.concurrent.TimeUnit;
 public class Result extends AppCompatActivity {
 
     private int exp;
+    private Thread thread;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,7 @@ public class Result extends AppCompatActivity {
                     break;
                 case 3:
                     exp = 500000;
+                    break;
             }
 
             TextView expPoint = (TextView)findViewById(R.id.exp_point);
